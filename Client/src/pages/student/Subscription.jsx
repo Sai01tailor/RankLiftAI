@@ -77,7 +77,10 @@ export default function Subscription() {
   useEffect(() => {
     /* Fetch current subscription status */
     paymentAPI.getSubscription()
-      .then(({ data }) => setCurrent(data.data))
+      .then(({ data }) => {
+        const subData = data?.data?.subscription;
+        if (subData) setCurrent(subData);
+      })
       .catch(() => { /* graceful fail – user may be free */ });
 
     /* Fetch plans from server (override defaults if available) */
@@ -91,7 +94,7 @@ export default function Subscription() {
     try {
       /* Step 1 – Create Razorpay order via backend */
       const { data } = await paymentAPI.createOrder(planId);
-      const { orderId, amount, currency } = data.data;
+      const { orderId, amount, currency } = data.data?.order || data.data;
 
       /* Step 2 – Open Razorpay checkout */
       const options = {
@@ -114,7 +117,7 @@ export default function Subscription() {
             toast.success('🎉 Subscription activated! Enjoy your plan.');
             /* Refresh subscription status */
             const sub = await paymentAPI.getSubscription();
-            setCurrent(sub.data.data);
+            if (sub.data?.data?.subscription) setCurrent(sub.data.data.subscription);
           } catch (_) {
             toast.error('Payment verification failed. Contact support.');
           }
@@ -180,7 +183,7 @@ export default function Subscription() {
       </div>
 
       {/* Current subscription banner */}
-      {current?.plan && (
+      {current?.plan && current.plan !== 'free' && (
         <div className="p-4 rounded-xl flex items-center gap-3"
              style={{ background: 'var(--accent-primary-light)', border: '1px solid var(--accent-primary)' }}>
           <CheckCircle2 size={18} style={{ color: 'var(--accent-primary)' }} />
@@ -188,9 +191,11 @@ export default function Subscription() {
             <p className="font-semibold text-sm" style={{ color: 'var(--accent-primary)' }}>
               You're on the {current.plan} plan
             </p>
-            <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
-              Renews on {new Date(current.expiresAt).toLocaleDateString('en-IN')}
-            </p>
+            {current.expiresAt && (
+              <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+                Renews on {new Date(current.expiresAt).toLocaleDateString('en-IN')}
+              </p>
+            )}
           </div>
         </div>
       )}

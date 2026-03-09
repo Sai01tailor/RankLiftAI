@@ -1,0 +1,64 @@
+[
+  {
+    "subscription": {
+      "isActive": false,
+      "plan": "free",
+      "expiresAt": null,
+      "razorpaySubscriptionId": null
+    },
+    "profile": {
+      "targetExam": "Both",
+      "targetYear": 2026,
+      "class": "12",
+      "preferredLanguage": "en"
+    },
+    "streak": {
+      "currentStreak": 0,
+      "longestStreak": 0,
+      "lastActiveDate": null
+    },
+    "_id": "69aaa17a82ad196f6dd61a16",
+    "username": "Sai",
+    "email": "tailorbhavini211@gmail.com",
+    "phone": "9106172270",
+    "avatarUrl": null,
+    "role": "student",
+    "accountStatus": "banned",
+    "totalPracticeTime": 0,
+    "lastLoginAt": "2026-03-06T09:42:18.958Z",
+    "createdAt": "2026-03-06T09:42:18.598Z",
+    "updatedAt": "2026-03-06T14:51:14.353Z",
+    "id": "69aaa17a82ad196f6dd61a16"
+  },
+  {
+    "subscription": {
+      "isActive": true,
+      "plan": "premium",
+      "expiresAt": "2027-03-06T14:51:10.121Z",
+      "razorpaySubscriptionId": null
+    },
+    "profile": {
+      "targetExam": "Both",
+      "targetYear": 2026,
+      "class": "12",
+      "preferredLanguage": "en"
+    },
+    "streak": {
+      "currentStreak": 0,
+      "longestStreak": 0,
+      "lastActiveDate": null
+    },
+    "_id": "69aae7731ec90455c7c92e0f",
+    "username": "yp sir",
+    "email": "yagyesh.pathak9@gmail.com",
+    "phone": "9752208046",
+    "avatarUrl": null,
+    "role": "student",
+    "accountStatus": "active",
+    "totalPracticeTime": 0,
+    "lastLoginAt": "2026-03-06T14:40:51.860Z",
+    "createdAt": "2026-03-06T14:40:51.556Z",
+    "updatedAt": "2026-03-06T14:51:10.124Z",
+    "id": "69aae7731ec90455c7c92e0f"
+  }
+]

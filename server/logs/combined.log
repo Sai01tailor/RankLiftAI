@@ -25024,3 +25024,267 @@ VersionError: No matching document found for id "69aae79b1ec90455c7c92e76" versi
 2026-03-06 20:26:34 [DEBUG]: POST /api/v1/student/tests/attempt/69aaeac21fdb9c2ccab4806a/submit 200 206ms
 2026-03-06 20:26:34 [DEBUG]: GET /api/v1/student/tests/attempt/69aaeac21fdb9c2ccab4806a/review 200 135ms
 2026-03-06 20:26:34 [DEBUG]: GET /api/v1/student/tests/attempt/69aaeac21fdb9c2ccab4806a/review 304 84ms
+2026-03-09 18:39:14 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:39:14 [INFO]: 📅 Initializing cron jobs...
+2026-03-09 18:39:14 [INFO]:    ✅ Hourly:  Expired token + subscription cleanup
+2026-03-09 18:39:14 [INFO]:    ✅ Daily:   Leaderboard rebuild (midnight IST)
+2026-03-09 18:39:14 [INFO]:    ✅ Weekly:  ML model retraining (Sunday 2 AM IST)
+2026-03-09 18:39:14 [INFO]: Redis connected successfully
+2026-03-09 18:39:14 [INFO]: Redis ready to accept commands
+2026-03-09 18:39:14 [INFO]: Redis PING successful
+2026-03-09 18:39:15 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:39:15 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:39:15 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:39:16 [INFO]: Worker 14376 listening on port 3001 [development]
+2026-03-09 18:39:16 [INFO]: Worker 15008 listening on port 3001 [development]
+2026-03-09 18:39:15 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:39:16 [INFO]: Worker 18624 listening on port 3001 [development]
+2026-03-09 18:39:15 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:39:16 [INFO]: Worker 8800 listening on port 3001 [development]
+2026-03-09 18:39:16 [INFO]: Redis connected successfully
+2026-03-09 18:39:16 [INFO]: Redis connected successfully
+2026-03-09 18:39:16 [INFO]: Redis connected successfully
+2026-03-09 18:39:16 [INFO]: Redis connected successfully
+2026-03-09 18:39:16 [INFO]: Redis ready to accept commands
+2026-03-09 18:39:16 [INFO]: Redis ready to accept commands
+2026-03-09 18:39:16 [INFO]: Redis ready to accept commands
+2026-03-09 18:39:16 [INFO]: Redis PING successful
+2026-03-09 18:39:16 [INFO]: Redis PING successful
+2026-03-09 18:39:16 [INFO]: Redis PING successful
+2026-03-09 18:39:16 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:39:16 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:39:16 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:39:16 [INFO]: Redis ready to accept commands
+2026-03-09 18:39:16 [INFO]: Redis PING successful
+2026-03-09 18:39:17 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:39:21 [DEBUG]: GET /api/v1/settings 200 40ms
+2026-03-09 18:39:21 [DEBUG]: GET /api/v1/settings 304 27ms
+2026-03-09 18:39:24 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:24 [WARN]: [GET] /api/v1/student/dashboard — 401 Invalid or expired access token
+2026-03-09 18:39:24 [DEBUG]: GET /api/v1/student/dashboard 401 7ms
+2026-03-09 18:39:24 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:24 [WARN]: [GET] /api/v1/student/test-history?limit=5 — 401 Invalid or expired access token
+2026-03-09 18:39:24 [DEBUG]: GET /api/v1/student/test-history?limit=5 401 3ms
+2026-03-09 18:39:24 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:24 [WARN]: [GET] /api/v1/student/dashboard — 401 Invalid or expired access token
+2026-03-09 18:39:24 [DEBUG]: GET /api/v1/student/dashboard 401 3ms
+2026-03-09 18:39:24 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:24 [WARN]: [GET] /api/v1/student/test-history?limit=5 — 401 Invalid or expired access token
+2026-03-09 18:39:24 [DEBUG]: GET /api/v1/student/test-history?limit=5 401 5ms
+2026-03-09 18:39:24 [WARN]: [POST] /api/v1/auth/refresh-token — 401 User not found
+2026-03-09 18:39:24 [DEBUG]: POST /api/v1/auth/refresh-token 401 30ms
+2026-03-09 18:39:27 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:27 [WARN]: [GET] /api/v1/payments/subscription — 401 Invalid or expired access token
+2026-03-09 18:39:27 [DEBUG]: GET /api/v1/payments/subscription 401 3ms
+2026-03-09 18:39:27 [DEBUG]: GET /api/v1/payments/plans 200 2ms
+2026-03-09 18:39:27 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:27 [WARN]: [GET] /api/v1/payments/subscription — 401 Invalid or expired access token
+2026-03-09 18:39:27 [DEBUG]: GET /api/v1/payments/subscription 401 2ms
+2026-03-09 18:39:27 [DEBUG]: GET /api/v1/payments/plans 304 1ms
+2026-03-09 18:39:30 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:30 [WARN]: [GET] /api/v1/student/dashboard — 401 Invalid or expired access token
+2026-03-09 18:39:30 [DEBUG]: GET /api/v1/student/dashboard 401 2ms
+2026-03-09 18:39:30 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:30 [WARN]: [GET] /api/v1/student/dashboard — 401 Invalid or expired access token
+2026-03-09 18:39:30 [DEBUG]: GET /api/v1/student/dashboard 401 3ms
+2026-03-09 18:39:32 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:32 [WARN]: [GET] /api/v1/payments/subscription — 401 Invalid or expired access token
+2026-03-09 18:39:32 [DEBUG]: GET /api/v1/payments/subscription 401 3ms
+2026-03-09 18:39:32 [DEBUG]: GET /api/v1/payments/plans 304 1ms
+2026-03-09 18:39:32 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:32 [WARN]: [GET] /api/v1/payments/subscription — 401 Invalid or expired access token
+2026-03-09 18:39:32 [DEBUG]: GET /api/v1/payments/subscription 401 3ms
+2026-03-09 18:39:32 [DEBUG]: GET /api/v1/payments/plans 304 1ms
+2026-03-09 18:39:34 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:39:34 [WARN]: [POST] /api/v1/payments/order — 401 Invalid or expired access token
+2026-03-09 18:39:34 [DEBUG]: POST /api/v1/payments/order 401 3ms
+2026-03-09 18:39:47 [WARN]: [POST] /api/v1/auth/logout — 401 Access token is required. Format: Bearer <token>
+2026-03-09 18:39:47 [DEBUG]: POST /api/v1/auth/logout 401 2ms
+2026-03-09 18:39:48 [WARN]: [POST] /api/v1/auth/login — 401 Invalid email or password
+2026-03-09 18:39:48 [DEBUG]: POST /api/v1/auth/login 401 28ms
+2026-03-09 18:39:51 [WARN]: [POST] /api/v1/auth/login — 401 Invalid email or password
+2026-03-09 18:39:51 [DEBUG]: POST /api/v1/auth/login 401 27ms
+2026-03-09 18:39:53 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-09 18:39:53 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-09 18:39:53 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-09 18:39:53 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-09 18:39:53 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-09 18:40:02 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:40:02 [INFO]: 📅 Initializing cron jobs...
+2026-03-09 18:40:03 [INFO]:    ✅ Hourly:  Expired token + subscription cleanup
+2026-03-09 18:40:03 [INFO]:    ✅ Daily:   Leaderboard rebuild (midnight IST)
+2026-03-09 18:40:03 [INFO]:    ✅ Weekly:  ML model retraining (Sunday 2 AM IST)
+2026-03-09 18:40:03 [INFO]: Redis connected successfully
+2026-03-09 18:40:03 [INFO]: Redis ready to accept commands
+2026-03-09 18:40:03 [INFO]: Redis PING successful
+2026-03-09 18:40:03 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:40:03 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:40:04 [INFO]: Worker 10656 listening on port 3001 [development]
+2026-03-09 18:40:03 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:40:04 [INFO]: Worker 12464 listening on port 3001 [development]
+2026-03-09 18:40:03 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:40:04 [INFO]: Worker 19572 listening on port 3001 [development]
+2026-03-09 18:40:04 [INFO]: Redis connected successfully
+2026-03-09 18:40:04 [INFO]: Redis connected successfully
+2026-03-09 18:40:04 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:40:04 [INFO]: Worker 8256 listening on port 3001 [development]
+2026-03-09 18:40:04 [INFO]: Redis connected successfully
+2026-03-09 18:40:04 [INFO]: Redis ready to accept commands
+2026-03-09 18:40:04 [INFO]: Redis ready to accept commands
+2026-03-09 18:40:04 [INFO]: Redis connected successfully
+2026-03-09 18:40:04 [INFO]: Redis PING successful
+2026-03-09 18:40:04 [INFO]: Redis ready to accept commands
+2026-03-09 18:40:04 [INFO]: Redis PING successful
+2026-03-09 18:40:04 [INFO]: Redis PING successful
+2026-03-09 18:40:04 [INFO]: Redis ready to accept commands
+2026-03-09 18:40:04 [INFO]: Redis PING successful
+2026-03-09 18:40:04 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:40:04 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:40:04 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:40:04 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-09 18:40:22 [WARN]: [POST] /api/v1/auth/login — 401 Invalid email or password
+2026-03-09 18:40:22 [DEBUG]: POST /api/v1/auth/login 401 34ms
+2026-03-09 18:40:38 [DEBUG]: GET /api/v1/settings 304 32ms
+2026-03-09 18:40:38 [DEBUG]: GET /api/v1/settings 304 29ms
+2026-03-09 18:40:39 [WARN]: [POST] /api/v1/auth/login — 401 Invalid email or password
+2026-03-09 18:40:39 [DEBUG]: POST /api/v1/auth/login 401 27ms
+2026-03-09 18:44:07 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:44:07 [INFO]: 📅 Initializing cron jobs...
+2026-03-09 18:44:07 [INFO]:    ✅ Hourly:  Expired token + subscription cleanup
+2026-03-09 18:44:07 [INFO]:    ✅ Daily:   Leaderboard rebuild (midnight IST)
+2026-03-09 18:44:07 [INFO]:    ✅ Weekly:  ML model retraining (Sunday 2 AM IST)
+2026-03-09 18:44:07 [INFO]: Redis connected successfully
+2026-03-09 18:44:07 [INFO]: Redis ready to accept commands
+2026-03-09 18:44:07 [INFO]: Redis PING successful
+2026-03-09 18:44:08 [INFO]: MongoDB connected: ac-5odzemh-shard-00-01.h8mx2c4.mongodb.net/test
+2026-03-09 18:44:08 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:44:08 [INFO]: Worker 12260 listening on port 3001 [development]
+2026-03-09 18:44:08 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:44:08 [INFO]: Worker 8040 listening on port 3001 [development]
+2026-03-09 18:44:08 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:44:08 [INFO]: Worker 25808 listening on port 3001 [development]
+2026-03-09 18:44:08 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:44:08 [INFO]: Worker 18132 listening on port 3001 [development]
+2026-03-09 18:44:09 [INFO]: Redis connected successfully
+2026-03-09 18:44:09 [INFO]: Redis connected successfully
+2026-03-09 18:44:09 [INFO]: Redis connected successfully
+2026-03-09 18:44:09 [INFO]: Redis connected successfully
+2026-03-09 18:44:09 [INFO]: Redis ready to accept commands
+2026-03-09 18:44:09 [INFO]: Redis ready to accept commands
+2026-03-09 18:44:09 [INFO]: Redis ready to accept commands
+2026-03-09 18:44:09 [INFO]: Redis ready to accept commands
+2026-03-09 18:44:09 [INFO]: Redis PING successful
+2026-03-09 18:44:09 [INFO]: Redis PING successful
+2026-03-09 18:44:09 [INFO]: Redis PING successful
+2026-03-09 18:44:09 [INFO]: Redis PING successful
+2026-03-09 18:44:09 [INFO]: MongoDB connected: ac-5odzemh-shard-00-01.h8mx2c4.mongodb.net/test
+2026-03-09 18:44:09 [INFO]: MongoDB connected: ac-5odzemh-shard-00-01.h8mx2c4.mongodb.net/test
+2026-03-09 18:44:09 [INFO]: MongoDB connected: ac-5odzemh-shard-00-01.h8mx2c4.mongodb.net/test
+2026-03-09 18:44:09 [INFO]: MongoDB connected: ac-5odzemh-shard-00-01.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:14 [DEBUG]: GET /api/v1/settings 304 38ms
+2026-03-09 18:45:14 [DEBUG]: GET /api/v1/settings 304 27ms
+2026-03-09 18:45:15 [DEBUG]: GET /api/v1/settings 304 27ms
+2026-03-09 18:45:15 [DEBUG]: GET /api/v1/settings 304 27ms
+2026-03-09 18:45:19 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:19 [INFO]: 📅 Initializing cron jobs...
+2026-03-09 18:45:19 [INFO]:    ✅ Hourly:  Expired token + subscription cleanup
+2026-03-09 18:45:19 [INFO]:    ✅ Daily:   Leaderboard rebuild (midnight IST)
+2026-03-09 18:45:19 [INFO]:    ✅ Weekly:  ML model retraining (Sunday 2 AM IST)
+2026-03-09 18:45:20 [INFO]: Redis connected successfully
+2026-03-09 18:45:20 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:20 [INFO]: Redis PING successful
+2026-03-09 18:45:20 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:21 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:21 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:21 [INFO]: Worker 28636 listening on port 3001 [development]
+2026-03-09 18:45:21 [INFO]: Worker 1316 listening on port 3001 [development]
+2026-03-09 18:45:21 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:21 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:21 [INFO]: Worker 20224 listening on port 3001 [development]
+2026-03-09 18:45:21 [INFO]: Worker 27304 listening on port 3001 [development]
+2026-03-09 18:45:21 [INFO]: Redis connected successfully
+2026-03-09 18:45:21 [INFO]: Redis connected successfully
+2026-03-09 18:45:21 [INFO]: Redis connected successfully
+2026-03-09 18:45:21 [INFO]: Redis connected successfully
+2026-03-09 18:45:21 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:21 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:21 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:21 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:21 [INFO]: Redis PING successful
+2026-03-09 18:45:21 [INFO]: Redis PING successful
+2026-03-09 18:45:21 [INFO]: Redis PING successful
+2026-03-09 18:45:21 [INFO]: Redis PING successful
+2026-03-09 18:45:21 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:21 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:21 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:21 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:31 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:45:31 [WARN]: [GET] /api/v1/student/test-history?limit=5 — 401 Invalid or expired access token
+2026-03-09 18:45:31 [DEBUG]: GET /api/v1/student/test-history?limit=5 401 17ms
+2026-03-09 18:45:31 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:45:31 [WARN]: [GET] /api/v1/student/dashboard — 401 Invalid or expired access token
+2026-03-09 18:45:31 [DEBUG]: GET /api/v1/student/dashboard 401 5ms
+2026-03-09 18:45:31 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:45:31 [WARN]: [GET] /api/v1/student/test-history?limit=5 — 401 Invalid or expired access token
+2026-03-09 18:45:31 [DEBUG]: GET /api/v1/student/test-history?limit=5 401 4ms
+2026-03-09 18:45:31 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:45:31 [WARN]: [GET] /api/v1/student/dashboard — 401 Invalid or expired access token
+2026-03-09 18:45:31 [DEBUG]: GET /api/v1/student/dashboard 401 5ms
+2026-03-09 18:45:31 [WARN]: [POST] /api/v1/auth/refresh-token — 401 User not found
+2026-03-09 18:45:31 [DEBUG]: POST /api/v1/auth/refresh-token 401 40ms
+2026-03-09 18:45:33 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:33 [INFO]: 📅 Initializing cron jobs...
+2026-03-09 18:45:33 [INFO]:    ✅ Hourly:  Expired token + subscription cleanup
+2026-03-09 18:45:33 [INFO]:    ✅ Daily:   Leaderboard rebuild (midnight IST)
+2026-03-09 18:45:33 [INFO]:    ✅ Weekly:  ML model retraining (Sunday 2 AM IST)
+2026-03-09 18:45:33 [INFO]: Redis connected successfully
+2026-03-09 18:45:33 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:33 [INFO]: Redis PING successful
+2026-03-09 18:45:34 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:34 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:34 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:34 [INFO]: Worker 23800 listening on port 3001 [development]
+2026-03-09 18:45:34 [INFO]: Worker 15300 listening on port 3001 [development]
+2026-03-09 18:45:34 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:34 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:45:34 [INFO]: Worker 24172 listening on port 3001 [development]
+2026-03-09 18:45:34 [INFO]: Worker 1224 listening on port 3001 [development]
+2026-03-09 18:45:34 [INFO]: Redis connected successfully
+2026-03-09 18:45:34 [INFO]: Redis connected successfully
+2026-03-09 18:45:34 [INFO]: Redis connected successfully
+2026-03-09 18:45:34 [INFO]: Redis connected successfully
+2026-03-09 18:45:34 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:34 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:34 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:34 [INFO]: Redis ready to accept commands
+2026-03-09 18:45:34 [INFO]: Redis PING successful
+2026-03-09 18:45:34 [INFO]: Redis PING successful
+2026-03-09 18:45:34 [INFO]: Redis PING successful
+2026-03-09 18:45:34 [INFO]: Redis PING successful
+2026-03-09 18:45:35 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:35 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:35 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:35 [INFO]: MongoDB connected: ac-5odzemh-shard-00-02.h8mx2c4.mongodb.net/test
+2026-03-09 18:45:38 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:45:38 [WARN]: [GET] /api/v1/payments/subscription — 401 Invalid or expired access token
+2026-03-09 18:45:38 [DEBUG]: GET /api/v1/payments/subscription 401 7ms
+2026-03-09 18:45:38 [DEBUG]: GET /api/v1/payments/plans 200 4ms
+2026-03-09 18:45:38 [DEBUG]: Access token verification failed: jwt expired
+2026-03-09 18:45:38 [WARN]: [GET] /api/v1/payments/subscription — 401 Invalid or expired access token
+2026-03-09 18:45:38 [DEBUG]: GET /api/v1/payments/subscription 401 4ms
+2026-03-09 18:45:38 [DEBUG]: GET /api/v1/payments/plans 304 2ms
+2026-03-09 18:45:46 [WARN]: [POST] /api/v1/auth/logout — 401 Access token is required. Format: Bearer <token>
+2026-03-09 18:45:46 [DEBUG]: POST /api/v1/auth/logout 401 2ms
+2026-03-09 18:45:50 [WARN]: [POST] /api/v1/auth/send-otp — 404 No account found with this email
+2026-03-09 18:45:50 [DEBUG]: POST /api/v1/auth/send-otp 404 79ms
+2026-03-09 18:46:20 [WARN]: [GET] /api/v1/auth/send-otp — 404 Route not found: GET /api/v1/auth/send-otp
+2026-03-09 18:46:20 [DEBUG]: GET /api/v1/auth/send-otp 404 1ms
+2026-03-09 18:47:00 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-09 18:47:00 [INFO]: 📅 Initializing cron jobs...
+2026-03-09 18:47:00 [INFO]:    ✅ Hourly:  Expired token + subscription cleanup
+2026-03-09 18:47:00 [INFO]:    ✅ Daily:   Leaderboard rebuild (midnight IST)
+2026-03-09 18:47:00 [INFO]:    ✅ Weekly:  ML model retraining (Sunday 2 AM IST)
+2026-03-09 18:47:00 [INFO]: Redis connected successfully
+2026-03-09 18:47:00 [INFO]: Redis ready to accept commands
+2026-03-09 18:47:00 [INFO]: Redis PING successful
+2026-03-09 18:47:00 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
