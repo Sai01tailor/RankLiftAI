@@ -1,0 +1,9 @@
+2026-02-25 22:31:38 [ERROR]: unhandledRejection: Operation `users.findOne()` buffering timed out after 10000ms
+MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (e:\JeeWallah\server2\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:186:23)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (e:\JeeWallah\server2\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:186:23)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {"error":{},"rejection":true,"date":"Wed Feb 25 2026 22:31:38 GMT+0530 (India Standard Time)","process":{"pid":10352,"uid":null,"gid":null,"cwd":"E:\\JeeWallah\\server2","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.17.1","argv":["C:\\Program Files\\nodejs\\node.exe","e:\\JeeWallah\\server2\\scripts\\seedMockTestGujarati.js"],"memoryUsage":{"rss":61394944,"heapTotal":21573632,"heapUsed":18792488,"external":20538736,"arrayBuffers":18264308}},"os":{"loadavg":[0,0,0],"uptime":338908.656},"trace":[{"column":23,"file":"e:\\JeeWallah\\server2\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js","function":null,"line":186,"method":null,"native":false},{"column":17,"file":"node:internal/timers","function":"listOnTimeout","line":588,"method":null,"native":false},{"column":7,"file":"node:internal/timers","function":"process.processTimers","line":523,"method":"processTimers","native":false}]}

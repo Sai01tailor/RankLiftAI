@@ -1,0 +1,338 @@
+[
+  {
+    "_id": "699887734ac10c3031925a73",
+    "content": {
+      "en": {
+        "text": "How many electrons in an atom can have the quantum numbers n=4, l=1?",
+        "imageUrl": null
+      }
+    },
+    "type": "NUMERICAL",
+    "solution": {
+      "en": {
+        "text": "4p subshell has 3 orbitals. 3 * 2 = 6 electrons.",
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    },
+    "options": [],
+    "title": "Atomic Structure — Quantum Numbers"
+  },
+  {
+    "_id": "699887734ac10c3031925a70",
+    "content": {
+      "en": {
+        "text": "The orbital angular momentum of a p-electron is given as:",
+        "imageUrl": null
+      }
+    },
+    "type": "SCQ",
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "h / 2π"
+        }
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "3 h / 2π"
+        }
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "2 h / 2π"
+        }
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "6 h / 2π"
+        }
+      }
+    ],
+    "solution": {
+      "en": {
+        "text": "L = (l(l+1)) * (h / 2π). For p, l = 1. -> 2 * h/2π.",
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    },
+    "title": "Atomic Structure — Quantum Numbers"
+  },
+  {
+    "_id": "699887734ac10c3031925a6f",
+    "content": {
+      "en": {
+        "text": "A particle is projected with a velocity v so that its horizontal range is twice the greatest height attained. The horizontal range is:",
+        "imageUrl": null
+      }
+    },
+    "type": "SCQ",
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "v^2 / g"
+        }
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "2v^2 / 3g"
+        }
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "4v^2 / 5g"
+        }
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "v^2 / 2g"
+        }
+      }
+    ],
+    "solution": {
+      "en": {
+        "text": "R = 2H ... R = 4u^2 / 5g.",
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    },
+    "title": "Kinematics — Projectile Motion"
+  },
+  {
+    "_id": "699887734ac10c3031925a71",
+    "content": {
+      "en": {
+        "text": "Let I = (from 0 to π/2) [ (sinx) / (sinx + cosx) ] dx. The value of I is:",
+        "imageUrl": null
+      }
+    },
+    "type": "SCQ",
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "π/2"
+        }
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "π/4"
+        }
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "π/3"
+        }
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "π/6"
+        }
+      }
+    ],
+    "solution": {
+      "en": {
+        "text": "2I = (0 to π/2) 1 dx = π/2 -> I = π/4.",
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    },
+    "title": "Calculus — Integration"
+  },
+  {
+    "_id": "699887734ac10c3031925a72",
+    "content": {
+      "en": {
+        "text": "A projectile is thrown with a velocity of 20 m/s at an angle of 60 degrees with the horizontal. After how many seconds is its velocity vector perpendicular to the initial velocity vector? (Take g = 10 m/s^2, round up to closest integer)"
+      }
+    },
+    "type": "INTEGER",
+    "solution": {
+      "en": {
+        "text": "t  2.3 seconds. Rounding up to closest integer gives 3."
+      }
+    },
+    "options": [],
+    "title": "Kinematics — Projectile Motion"
+  },
+  {
+    "_id": "699f2d5817f4b4f571d950e0",
+    "content": {
+      "en": {
+        "text": "Hello World ( im temp Question)",
+        "imageUrl": null
+      }
+    },
+    "type": "NUMERICAL",
+    "options": [],
+    "solution": {
+      "en": {
+        "text": "",
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    }
+  },
+  {
+    "_id": "69a425fadcd7eaab5b962c00",
+    "content": {
+      "en": {
+        "text": "Hello World",
+        "imageUrl": null
+      }
+    },
+    "type": "INTEGER",
+    "options": [],
+    "solution": {
+      "en": {
+        "text": "this is a hint",
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    },
+    "title": "Calculus — Integration"
+  },
+  {
+    "_id": "69a439aa845c82c9e32ee312",
+    "title": "Kinematics — Projectile Motion",
+    "content": {
+      "en": {
+        "text": "A projectile is launched at 45° with speed 20 m/s. What is the horizontal range? (g = 10 m/s²)",
+        "imageUrl": null
+      }
+    },
+    "type": "SCQ",
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "20 m"
+        }
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "40 m"
+        }
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "10 m"
+        }
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "80 m"
+        }
+      }
+    ],
+    "solution": {
+      "en": {
+        "text": null,
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    }
+  },
+  {
+    "_id": "69a439aa845c82c9e32ee313",
+    "title": "Kinematics — Projectile Motion",
+    "content": {
+      "en": {
+        "text": "A ball is thrown upward with velocity 20 m/s. Time to reach max height? (g = 10 m/s²)",
+        "imageUrl": null
+      }
+    },
+    "type": "SCQ",
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "1 s"
+        }
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "2 s"
+        }
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "3 s"
+        }
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "4 s"
+        }
+      }
+    ],
+    "solution": {
+      "en": {
+        "text": null,
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    }
+  },
+  {
+    "_id": "69a439aa845c82c9e32ee314",
+    "title": "Kinematics — Circular Motion",
+    "content": {
+      "en": {
+        "text": "A particle undergoes uniform circular motion. The net work done in one complete revolution is:",
+        "imageUrl": null
+      }
+    },
+    "type": "SCQ",
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Positive"
+        }
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Negative"
+        }
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Zero"
+        }
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Depends on speed"
+        }
+      }
+    ],
+    "solution": {
+      "en": {
+        "text": null,
+        "imageUrl": null,
+        "videoUrl": null
+      }
+    }
+  }
+]

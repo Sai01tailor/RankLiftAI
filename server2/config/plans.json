@@ -1,0 +1,23 @@
+{
+  "basic": {
+    "name": "Basic",
+    "amountINR": 49900,
+    "durationDays": 30,
+    "features": [
+      "All questions",
+      "5 mock tests/month",
+      "Basic analytics"
+    ]
+  },
+  "premium": {
+    "name": "Premium",
+    "amountINR": 99900,
+    "durationDays": 30,
+    "features": [
+      "All questions",
+      "Unlimited mock tests",
+      "AI explanations",
+      "Full analytics"
+    ]
+  }
+}

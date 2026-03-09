@@ -1,0 +1,106 @@
+[
+    {
+        "subjectSlug": "physics",
+        "chapterSlug": "mechanics",
+        "topicSlug": "newton-laws",
+        "type": "SCQ",
+        "difficulty": "Easy",
+        "examCategory": "JEE Main",
+        "content": {
+            "en": { "text": "A body of mass 5 kg is acted upon by a force of 10 N. The acceleration produced is:" },
+            "hi": { "text": "5 kg द्रव्यमान की एक वस्तु पर 10 N का बल लगाया जाता है। उत्पन्न त्वरण होगा:" }
+        },
+        "options": [
+            { "key": "A", "text": { "en": "1 m/s²" }, "isCorrect": false },
+            { "key": "B", "text": { "en": "2 m/s²" }, "isCorrect": true },
+            { "key": "C", "text": { "en": "5 m/s²" }, "isCorrect": false },
+            { "key": "D", "text": { "en": "10 m/s²" }, "isCorrect": false }
+        ],
+        "correctAnswer": { "optionKeys": ["B"] },
+        "solution": {
+            "en": { "text": "Using Newton's second law: F = ma → a = F/m = 10/5 = 2 m/s²" }
+        },
+        "marks": { "correct": 4, "incorrect": -1 }
+    },
+    {
+        "subjectSlug": "physics",
+        "chapterSlug": "mechanics",
+        "topicSlug": "newton-laws",
+        "type": "MCQ",
+        "difficulty": "Medium",
+        "examCategory": "JEE Advanced",
+        "content": {
+            "en": { "text": "Which of the following are correct statements about Newton's third law?" }
+        },
+        "options": [
+            { "key": "A", "text": { "en": "Action and reaction forces act on different bodies" }, "isCorrect": true },
+            { "key": "B", "text": { "en": "Action and reaction forces are equal in magnitude" }, "isCorrect": true },
+            { "key": "C", "text": { "en": "Action and reaction can cancel each other" }, "isCorrect": false },
+            { "key": "D", "text": { "en": "Action and reaction are of same type" }, "isCorrect": true }
+        ],
+        "correctAnswer": { "optionKeys": ["A", "B", "D"] },
+        "solution": {
+            "en": { "text": "Newton's third law: For every action, there is an equal and opposite reaction. They act on different bodies so they don't cancel. They are always of the same nature (gravitational-gravitational, contact-contact)." }
+        },
+        "marks": { "correct": 4, "incorrect": -2 }
+    },
+    {
+        "subjectSlug": "physics",
+        "chapterSlug": "mechanics",
+        "topicSlug": "newton-laws",
+        "type": "INTEGER",
+        "difficulty": "Hard",
+        "examCategory": "JEE Advanced",
+        "content": {
+            "en": { "text": "Two blocks of masses 2 kg and 3 kg are in contact on a frictionless surface. A force of 25 N is applied on the 2 kg block. Find the contact force between the blocks in Newtons." }
+        },
+        "options": [],
+        "correctAnswer": { "numericValue": 15 },
+        "solution": {
+            "en": { "text": "Total acceleration: a = 25/(2+3) = 5 m/s². Contact force on 3 kg block: F = 3 × 5 = 15 N" }
+        },
+        "marks": { "correct": 3, "incorrect": 0 }
+    },
+    {
+        "subjectSlug": "chemistry",
+        "chapterSlug": "atomic-structure",
+        "topicSlug": "quantum-numbers",
+        "type": "SCQ",
+        "difficulty": "Easy",
+        "examCategory": "JEE Main",
+        "content": {
+            "en": { "text": "The maximum number of electrons in a subshell with l = 3 is:" }
+        },
+        "options": [
+            { "key": "A", "text": { "en": "6" }, "isCorrect": false },
+            { "key": "B", "text": { "en": "10" }, "isCorrect": false },
+            { "key": "C", "text": { "en": "14" }, "isCorrect": true },
+            { "key": "D", "text": { "en": "18" }, "isCorrect": false }
+        ],
+        "correctAnswer": { "optionKeys": ["C"] },
+        "solution": {
+            "en": { "text": "Maximum electrons = 2(2l+1) = 2(2×3+1) = 2×7 = 14" }
+        },
+        "marks": { "correct": 4, "incorrect": -1 }
+    },
+    {
+        "subjectSlug": "mathematics",
+        "chapterSlug": "calculus",
+        "topicSlug": "integration",
+        "type": "NUMERICAL",
+        "difficulty": "Medium",
+        "examCategory": "JEE Main",
+        "content": {
+            "en": { "text": "The value of ∫₀¹ (3x² + 2x) dx is equal to:" }
+        },
+        "options": [],
+        "correctAnswer": {
+            "numericValue": 2.0,
+            "numericRange": { "min": 1.99, "max": 2.01 }
+        },
+        "solution": {
+            "en": { "text": "∫₀¹ (3x² + 2x) dx = [x³ + x²]₀¹ = (1 + 1) - (0 + 0) = 2" }
+        },
+        "marks": { "correct": 4, "incorrect": 0 }
+    }
+]

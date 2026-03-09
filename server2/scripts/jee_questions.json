@@ -1,0 +1,196 @@
+[
+  {
+    "subjectSlug": "physics",
+    "chapterSlug": "kinematics",
+    "topicSlug": "projectile-motion",
+    "type": "SCQ",
+    "difficulty": "Medium",
+    "examCategory": "JEE Main",
+    "content": {
+      "en": {
+        "text": "A particle is projected with a velocity v so that its horizontal range is twice the greatest height attained. The horizontal range is:",
+        "images": []
+      }
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "v^2 / g",
+        "images": [],
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "2v^2 / 3g",
+        "images": [],
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "4v^2 / 5g",
+        "images": [],
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "v^2 / 2g",
+        "images": [],
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": {
+      "optionKeys": [
+        "C"
+      ]
+    },
+    "solution": {
+      "en": {
+        "text": "Let u be velocity and θ be angle of projection.\nHeight H = u^2 sin^2θ / 2g\nRange R = u^2 sin2θ / g\nGiven R = 2H\n=> u^2 sin2θ / g = 2 * (u^2 sin^2θ / 2g)\n=> 2sinθcosθ = sin^2θ\n=> tanθ = 2\nsinθ = 2/√5, cosθ = 1/√5\nR = (u^2 * 2(2/√5)(1/√5)) / g = 4u^2 / 5g."
+      }
+    }
+  },
+  {
+    "subjectSlug": "chemistry",
+    "chapterSlug": "atomic-structure",
+    "topicSlug": "quantum-numbers",
+    "type": "SCQ",
+    "difficulty": "Easy",
+    "examCategory": "JEE Main",
+    "content": {
+      "en": {
+        "text": "The orbital angular momentum of a p-electron is given as:",
+        "images": []
+      }
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "h / √2π",
+        "images": [],
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "√3 h / 2π",
+        "images": [],
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "√2 h / 2π",
+        "images": [],
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "√6 h / 2π",
+        "images": [],
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": {
+      "optionKeys": [
+        "C"
+      ]
+    },
+    "solution": {
+      "en": {
+        "text": "For a p-orbital, azimuthal quantum number l = 1.\nOrbital angular momentum L = √(l(l+1)) * (h / 2π)\nL = √(1(1+1)) * (h / 2π) = √2 * h / 2π. Note that h cross is h/2π"
+      }
+    }
+  },
+  {
+    "subjectSlug": "mathematics",
+    "chapterSlug": "calculus",
+    "topicSlug": "integration",
+    "type": "SCQ",
+    "difficulty": "Hard",
+    "examCategory": "JEE Advanced",
+    "content": {
+      "en": {
+        "text": "Let I = ∫(from 0 to π/2) [ (sinx) / (sinx + cosx) ] dx. The value of I is:",
+        "images": []
+      }
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "π/2",
+        "images": [],
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "π/4",
+        "images": [],
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "π/3",
+        "images": [],
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "π/6",
+        "images": [],
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": {
+      "optionKeys": [
+        "B"
+      ]
+    },
+    "solution": {
+      "en": {
+        "text": "By property of definite integrals, ∫(0 to a) f(x)dx = ∫(0 to a) f(a-x)dx.\nI = ∫(0 to π/2) sin(π/2 - x) / (sin(π/2 - x) + cos(π/2 - x)) dx\nI = ∫(0 to π/2) cosx / (cosx + sinx) dx\nAdding the two equations:\n2I = ∫(0 to π/2) 1 dx = [x] from 0 to π/2 = π/2\nI = π/4."
+      }
+    }
+  },
+  {
+    "subjectSlug": "physics",
+    "chapterSlug": "kinematics",
+    "topicSlug": "projectile-motion",
+    "type": "INTEGER",
+    "difficulty": "Medium",
+    "examCategory": "JEE Main",
+    "content": {
+      "en": {
+        "text": "A projectile is thrown with a velocity of 20 m/s at an angle of 60 degrees with the horizontal. After how many seconds is its velocity vector perpendicular to the initial velocity vector? (Take g = 10 m/s^2, round up to closest integer)",
+        "images": []
+      }
+    },
+    "correctAnswer": {
+      "numericValue": 3
+    },
+    "solution": {
+      "en": {
+        "text": "U.V = 0 => 400 - 100√3t = 0 => t = 4/√3 ≈ 2.3 seconds. Rounding up to closest integer gives 3."
+      }
+    }
+  },
+  {
+    "subjectSlug": "chemistry",
+    "chapterSlug": "atomic-structure",
+    "topicSlug": "quantum-numbers",
+    "type": "NUMERICAL",
+    "difficulty": "Easy",
+    "examCategory": "JEE Main",
+    "content": {
+      "en": {
+        "text": "How many electrons in an atom can have the quantum numbers n=4, l=1?",
+        "images": []
+      }
+    },
+    "correctAnswer": {
+      "numericValue": 6
+    },
+    "solution": {
+      "en": {
+        "text": "For n=4 and l=1 (which corresponds to the 4p subshell),\nThe magnetic quantum number ml can take values -1, 0, +1 (3 orbitals).\nEach orbital can hold 2 electrons (spin ms = +1/2, -1/2).\nTotal electrons = 3 * 2 = 6."
+      }
+    }
+  }
+]
