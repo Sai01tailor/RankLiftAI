@@ -1,336 +1,180 @@
-# 🎯 JeeWallah — JEE Preparation Platform
+# 🚀 Ranklift AI — Next-Gen JEE Preparation Platform
 
-A production-ready, scalable backend for a JEE (Main + Advanced) preparation platform supporting **1M+ users** with AI-powered explanations, ML-based weak topic detection, real-time mock tests, and comprehensive analytics.
+> **Live Website:** [www.rankliftai.in](https://www.rankliftai.in)
+
+Ranklift AI is a production-ready, scalable, and personalized AI-driven preparation platform for JEE (Main & Advanced) aspirants. Designed to handle large-scale user traffic, it provides AI-powered explanations, ML-based weak topic detection, real-time mock tests, and comprehensive analytics to supercharge students' learning experiences.
+
+---
+
+## ✨ Key Features
+
+- **🤖 AI-Powered Doubt Resolution:** Integration with Google Gemini 2.0 Flash to provide step-by-step explanations, hints, and immediate doubt solving.
+- **📈 ML-Driven Analytics:** Python Flask & scikit-learn microservice that automatically detects weak topics based on practice attempts and predicts JEE scores.
+- **📝 Real-time Mock Tests:** Test blueprints matching actual JEE Main and Advanced exam patterns with dynamic, multi-format questions.
+- **📊 Comprehensive Dashboards:** Actionable, granular insights into performance, per-subject mastery, and test-by-test progression.
+- **🏆 Global Leaderboards:** Competitive global and test-specific rankings.
+- **🔐 Premium Security:** Role-Based Access Control (RBAC), robust authentication (JWT + OTP), rate limiting, and NoSQL injection protection.
 
 ---
 
 ## 📐 Architecture Overview
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        CLIENT (React/Next.js)                       │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               │ HTTPS
+```text
+┌───────────────────────────────────────────────────────────────────┐
+│                        FRONTEND (React)                           │
+│                     [ Hosted on Netlify ]                         │
+└──────────────────────────────┬────────────────────────────────────┘
+                               │ HTTPS (REST API)
                                ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                      Cloudflare CDN + WAF                           │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                   Node.js API (Express + Cluster)                   │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌───────────┐          │
-│  │   Auth   │  │ Student  │  │  Admin   │  │    AI     │          │
-│  │Controller│  │Controller│  │Controller│  │Controller │          │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └─────┬─────┘          │
-│       │              │              │               │               │
-│  ┌────▼──────────────▼──────────────▼───────────────▼──────────┐   │
-│  │                    SERVICE LAYER                              │   │
-│  │  OTP │ JWT │ Email │ Cache │ Gemini │ ML Client              │   │
-│  └────┬──────────────┬──────────────┬───────────────┬──────────┘   │
-└───────┼──────────────┼──────────────┼───────────────┼──────────────┘
-        │              │              │               │
-        ▼              ▼              ▼               ▼
-   ┌─────────┐   ┌─────────┐   ┌──────────┐   ┌──────────┐
-   │ MongoDB │   │  Redis  │   │ Gemini   │   │  Flask   │
-   │ Atlas   │   │ (Cache) │   │ 2.0 API  │   │ ML Svc   │
-   └─────────┘   └─────────┘   └──────────┘   └──────────┘
+┌───────────────────────────────────────────────────────────────────┐
+│                     BACKEND (Node.js + Express)                   │
+│                       [ Hosted on Render ]                        │
+│                                                                   │
+│  ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐          │
+│  │  Auth   │   │ Student │   │  Admin  │   │   AI    │          │
+│  └────┬────┘   └────┬────┘   └────┬────┘   └────┬────┘          │
+└───────┼─────────────┼─────────────┼─────────────┼───────────────┘
+        │             │             │             │
+        ▼             ▼             ▼             ▼
+  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐ 
+  │ MongoDB  │  │  Redis   │  │ Gemini   │  │ Flask ML │ 
+  │  Atlas   │  │ (Cache)  │  │ 2.0 API  │  │ (Render) │ 
+  └──────────┘  └──────────┘  └──────────┘  └──────────┘ 
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Infrastructure
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Runtime** | Node.js 22 + Express 5 | API Server |
-| **Database** | MongoDB 7 (Mongoose 9) | Primary data store |
-| **Cache** | Redis 7 (ioredis) | Caching, rate limiting, OTP storage |
-| **Auth** | JWT + bcryptjs | Access/refresh tokens, password hashing |
-| **AI** | Google Gemini 2.0 Flash | Step-by-step explanations, hints, doubt solving |
-| **ML** | Python Flask + scikit-learn | Weak topic detection, score prediction |
-| **Email** | Nodemailer (SMTP) | OTP delivery |
-| **Security** | Helmet, CORS, express-mongo-sanitize | HTTP hardening, injection prevention |
-| **DevOps** | Docker, PM2, Cloudflare | Containerization, process management, CDN |
+| Component | Technology | Hosting / Deployment | Purpose |
+|-----------|-----------|----------------------|---------|
+| **Frontend** | React / JavaScript | **Netlify** | User interface & student dashboard |
+| **Backend API** | Node.js 22 + Express 5 | **Render** | Primary API Server |
+| **ML Microservice**| Python Flask + scikit-learn | **Render** | Weak topic & score prediction |
+| **Database** | MongoDB 7 (Mongoose 9) | MongoDB Atlas | Primary data store |
+| **Cache** | Redis 7 | Upstash / Redis Labs | Caching, rate limiting, OTP storage |
+| **AI** | Google Gemini 2.0 Flash | Google AI Studio | Live hints, step-by-step solutions |
+
+### 🔒 Security & Optimization
+- **Auth:** JWT + bcryptjs (Access/refresh tokens, password hashing)
+- **Email:** Nodemailer (SMTP) for OTPs
+- **Security:** Helmet, CORS, express-mongo-sanitize (HTTP hardening, injection prevention)
+- **DevOps:** Docker support for local development
 
 ---
 
 ## 📁 Project Structure
 
-```
-JeeWallah/
-├── Server/                        # Node.js API
-│   ├── config/
-│   │   ├── index.js               # Centralized config loader
-│   │   ├── db.js                  # MongoDB connection (retry + graceful shutdown)
-│   │   └── redis.js               # Redis singleton client
-│   │
-│   ├── models/                    # 10 Mongoose models
-│   │   ├── Users.js               # User identity, auth, profile, streaks
-│   │   ├── SubNTopic.js           # Subject → Chapter → Topic hierarchy
-│   │   ├── Question.js            # Questions (5 types, bilingual, solutions)
-│   │   ├── MockTest.js            # Test blueprints (JEE Main/Advanced patterns)
-│   │   ├── TestAttempt.js         # Student test sessions with evaluation
-│   │   ├── PracticeAttempt.js     # Individual question practice tracking
-│   │   ├── PerformanceAnalytics.js# Pre-computed student analytics
-│   │   ├── Leaderboard.js         # Per-test and global rankings
-│   │   ├── AIInteractionLog.js    # Gemini API call logging & caching
-│   │   └── index.js               # Barrel export
-│   │
-│   ├── services/                  # Business logic
-│   │   ├── auth.js                # JWT token generation & verification
-│   │   ├── otp.js                 # OTP generation, storage, verification
-│   │   ├── email.js               # Nodemailer email service
-│   │   ├── cache.js               # Redis cache abstraction
-│   │   ├── gemini.js              # Gemini AI integration
-│   │   └── ml.js                  # Flask ML service client
-│   │
-│   ├── middleware/                 # Request pipeline
-│   │   ├── auth.js                # JWT authentication
-│   │   ├── roleGuard.js           # Role-based access control
-│   │   ├── rateLimiter.js         # Redis-backed rate limiting
-│   │   ├── validate.js            # Input validation (zero-dep)
-│   │   ├── sanitize.js            # NoSQL injection + XSS protection
-│   │   └── errorHandler.js        # Centralized error handling
-│   │
-│   ├── controller/                # Request handlers
-│   │   ├── authController.js      # Register, Login, OTP, Refresh, Logout
-│   │   ├── studentController.js   # Practice, Tests, Analytics, Leaderboard
-│   │   ├── adminController.js     # CRUD Questions, Tests, Platform Stats
-│   │   └── aiController.js        # Gemini explanations, ML predictions
-│   │
-│   ├── Routes/                    # API routing
-│   │   ├── index.js               # Route aggregator (/api/v1/*)
-│   │   ├── authRoutes.js          # /api/v1/auth/*
-│   │   ├── studentRoutes.js       # /api/v1/student/*
-│   │   ├── adminRoutes.js         # /api/v1/admin/*
-│   │   └── aiRoutes.js            # /api/v1/ai/*
-│   │
-│   ├── utils/                     # Shared utilities
-│   │   ├── ApiError.js            # Custom error class (400, 401, 403, etc.)
-│   │   ├── ApiResponse.js         # Standardized JSON responses
-│   │   ├── asyncHandler.js        # Async error wrapper
-│   │   ├── logger.js              # Winston logger (console + file)
-│   │   ├── pagination.js          # Reusable pagination helpers
-│   │   └── constants.js           # App-wide enums & config values
-│   │
-│   ├── index.js                   # Entry point (clustering + Express)
-│   ├── Dockerfile                 # Production container
-│   ├── docker-compose.yml         # Full stack orchestration
-│   ├── ecosystem.config.js        # PM2 cluster config
-│   ├── .env.example               # Environment variable template
-│   └── package.json
+```text
+RankliftAI/
+├── Client/                        # React Frontend (Netlify)
+│   ├── src/                       # UI components, pages, hooks, state
+│   └── public/                    # Static assets
 │
-└── ml-service/                    # Python ML Microservice
-    ├── app.py                     # Flask API (5 endpoints)
-    ├── predictor.py               # Inference classes
-    ├── trainer.py                 # Training pipeline (from MongoDB)
-    ├── bootstrap_models.py        # Initial model training (synthetic data)
-    ├── models/                    # Trained .joblib model files
-    ├── requirements.txt
-    └── Dockerfile
+├── server/                        # Node.js Express API (Render)
+│   ├── config/                    # DB, Redis, and global configs
+│   ├── models/                    # Mongoose Models (Users, Questions, Tests, etc.)
+│   ├── services/                  # Business logic (Auth, OTP, AI, ML Client)
+│   ├── middleware/                # Rate limiting, Auth guards, Error handling
+│   ├── controller/                # Request handlers (Auth, Student, Admin, AI)
+│   ├── Routes/                    # API Routing definitions
+│   └── utils/                     # Helpers (Errors, Responses, Loggers)
+│
+└── ml-service/                    # Python ML Microservice (Render)
+    ├── app.py                     # Flask API endpoints
+    ├── predictor.py               # Inference algorithms
+    ├── trainer.py                 # Training pipeline
+    └── models/                    # Serialized .joblib model files
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Local Development Guide
 
 ### Prerequisites
-
 - **Node.js** ≥ 20
 - **Python** ≥ 3.10
-- **MongoDB** (local or Atlas free tier)
-- **Redis** (local or Upstash free tier)
+- **MongoDB** (Local or Atlas)
+- **Redis** (Local or Upstash)
 
-### 1. Clone & Install
-
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/JeeWallah.git
-cd JeeWallah
+git clone https://github.com/your-username/RankliftAI.git
+cd RankliftAI
+```
 
-# Backend
-cd Server
+### 2. Frontend Setup (Client)
+```bash
+cd Client
 npm install
+npm run dev
+```
 
-# ML Service
+### 3. Backend API Setup (Server)
+```bash
+cd ../server
+npm install
+cp .env.example .env
+# Fill in your MONGODB_URI, REDIS_URL, GEMINI_API_KEY, and JWT_SECRETS in .env
+npm run dev
+```
+
+### 4. ML Service Setup (ml-service)
+```bash
 cd ../ml-service
 pip install -r requirements.txt
-```
-
-### 2. Configure Environment
-
-```bash
-# Server
-cd Server
 cp .env.example .env
-# Edit .env with your values (MongoDB URI, JWT secrets, SMTP, Gemini API key)
-
-# ML Service
-cd ../ml-service
-cp .env.example .env
-```
-
-**Minimum required `.env` values:**
-```env
-NODE_ENV=development
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/jeewallah
-JWT_ACCESS_SECRET=your-super-secret-key-here-min-32-chars
-JWT_REFRESH_SECRET=another-super-secret-key-here-min-32
-GEMINI_API_KEY=your-gemini-api-key     # Get free at ai.google.dev
-```
-
-### 3. Start Services
-
-```bash
-# Terminal 1 — Backend
-cd Server
-npm run dev
-
-# Terminal 2 — ML Service
-cd ml-service
-python bootstrap_models.py     # One-time: create initial ML models
-python app.py                  # Start Flask server
-
-# Terminal 3 — MongoDB (if local)
-mongod
-
-# Terminal 4 — Redis (if local)
-redis-server
-```
-
-### 4. Verify
-
-```bash
-# Health check
-curl http://localhost:3000/api/v1/health
-
-# ML health
-curl http://localhost:5000/health
+python bootstrap_models.py  # Create initial synthetic models
+python app.py               # Start Flask server
 ```
 
 ---
 
-## 📡 API Reference
+## 📡 API Reference Overview
 
-Base URL: `http://localhost:3000/api/v1`
+*(Base URL: `http://localhost:3000/api/v1` or `https://api.rankliftai.in/api/v1`)*
 
-### Authentication
+### Authentication & Users
+- `POST /auth/register` - Register a new account
+- `POST /auth/login` - Authenticate via credentials
+- `POST /auth/send-otp` / `verify-otp` - Passwordless login capabilities
+- `GET  /auth/me` - Retrieve current user profile
 
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| POST | `/auth/register` | Create new account | ❌ |
-| POST | `/auth/login` | Login with email + password | ❌ |
-| POST | `/auth/send-otp` | Send OTP to email | ❌ |
-| POST | `/auth/verify-otp` | Verify OTP & login (passwordless) | ❌ |
-| POST | `/auth/refresh-token` | Get new access token | ❌ |
-| POST | `/auth/logout` | Revoke refresh token | ✅ |
-| POST | `/auth/logout-all` | Logout all devices | ✅ |
-| GET | `/auth/me` | Get current user profile | ✅ |
-| PATCH | `/auth/profile` | Update profile | ✅ |
+### Student Dashboard
+- `GET  /student/subjects` & `chapters` - Fetch curriculum mapping
+- `GET  /student/tests` - Browse mock tests
+- `POST /student/tests/:id/start` - Initiate test sessions
+- `GET  /student/analytics` - View performance insights and ML-generated weak subjects
 
-### Student
+### Admin Panel
+- `POST /admin/questions` - Create / Manage question banks (incl. Bulk Upload)
+- `POST /admin/tests` - Design and publish Mock Tests
+- `GET  /admin/analytics/overview` - Platform-wide statistics
 
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| GET | `/student/subjects` | List all subjects | ✅ |
-| GET | `/student/chapters/:subjectId` | Chapters in a subject | ✅ |
-| GET | `/student/topics/:chapterId` | Topics in a chapter | ✅ |
-| GET | `/student/questions` | Browse questions (with filters) | ✅ |
-| GET | `/student/questions/:id` | Get single question | ✅ |
-| POST | `/student/practice/submit` | Submit practice attempt | ✅ |
-| GET | `/student/practice/bookmarks` | Get bookmarked questions | ✅ |
-| PATCH | `/student/practice/:id/bookmark` | Toggle bookmark | ✅ |
-| GET | `/student/tests` | List available mock tests | ✅ |
-| POST | `/student/tests/:testId/start` | Start/resume mock test | ✅ |
-| PATCH | `/student/tests/attempt/:id/save` | Auto-save progress | ✅ |
-| POST | `/student/tests/attempt/:id/submit` | Submit test for evaluation | ✅ |
-| GET | `/student/tests/attempt/:id/review` | Review submitted test | ✅ |
-| GET | `/student/test-history` | Past test results | ✅ |
-| GET | `/student/analytics` | Performance analytics | ✅ |
-| GET | `/student/analytics/weak-topics` | Weak topic analysis | ✅ |
-| GET | `/student/leaderboard/:testId` | Test leaderboard | ✅ |
-
-### Admin
-
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| POST | `/admin/subjects` | Create subject | 🔐 Admin |
-| POST | `/admin/chapters` | Create chapter | 🔐 Admin |
-| POST | `/admin/topics` | Create topic | 🔐 Admin |
-| POST | `/admin/questions` | Create question | 🔐 Admin |
-| POST | `/admin/questions/bulk` | Bulk upload (JSON) | 🔐 Admin |
-| PUT | `/admin/questions/:id` | Edit question | 🔐 Admin |
-| DELETE | `/admin/questions/:id` | Soft-delete question | 🔐 Admin |
-| POST | `/admin/tests` | Create mock test | 🔐 Admin |
-| PUT | `/admin/tests/:id` | Edit mock test | 🔐 Admin |
-| PATCH | `/admin/tests/:id/publish` | Publish mock test | 🔐 Admin |
-| GET | `/admin/analytics/overview` | Platform statistics | 🔐 Admin |
-| GET | `/admin/users` | List all users | 🔐 Admin |
-
-### AI & ML
-
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| POST | `/ai/explain` | Get AI explanation | ✅ |
-| POST | `/ai/feedback` | Rate an explanation | ✅ |
-| POST | `/ai/ml/weak-topics` | ML weak topic prediction | ✅ |
-| POST | `/ai/ml/predict-score` | ML score prediction | ✅ |
-| GET | `/ai/ml/health` | ML service status | ✅ |
+### AI & Machine Learning
+- `POST /ai/explain` - Interact with Gemini 2.0 for step-by-step problem-solving
+- `POST /ai/ml/weak-topics` - Trigger Python microservice for weakness detection
+- `POST /ai/ml/predict-score` - Forecast targeted JEE scores
 
 ---
 
-## 🔒 Security Features
+## ☁️ Deployment Strategy
 
-- **JWT Authentication** with access + refresh token rotation
-- **Refresh token theft detection** — revokes all tokens on reuse
-- **bcrypt (12 rounds)** password hashing
-- **Redis-backed rate limiting** — 4 tiers (API, Auth, OTP, AI)
-- **Helmet** — HTTP security headers
-- **CORS** — configurable origin whitelist
-- **express-mongo-sanitize** — prevents NoSQL injection (`$gt`, `$where`)
-- **XSS protection** — HTML entity encoding (with whitelist for LaTeX)
-- **Input validation** — schema-based, no external deps
+Ranklift AI is optimized for cloud-native deployment:
 
----
-
-## 📊 ML Models
-
-| Model | Algorithm | Training Data | Use Case |
-|-------|-----------|---------------|----------|
-| **Weak Topic Detector** | Random Forest (100 trees) | PracticeAttempt history | Identifies struggling topics |
-| **Score Predictor** | Gradient Boosting (150 trees) | MockTest score history | Predicts JEE score |
-
-Both models include rule-based/statistical fallbacks for when the ML service is unavailable.
+1. **Frontend (`/Client`)**
+   - Automatically deployed to **Netlify** configured with CD from main branch.
+   - Pointed to `www.rankliftai.in`.
+   
+2. **Backend API (`/server`)**
+   - Deployed as a Web Service on **Render**.
+   - Connected to internal/external Redis for rate limiting and MongoDB Atlas for database persistence.
+   - Set up custom domains for API (e.g., `api.rankliftai.in`).
+   
+3. **ML Microservice (`/ml-service`)**
+   - Also deployed as a Web Service/Background Worker on **Render**.
+   - Communicates securely with the Node Backend over authenticated REST.
 
 ---
 
-## 🐳 Docker Deployment
-
-```bash
-# Full stack — API + MongoDB + Redis + ML
-cd Server
-docker-compose up -d
-
-# Check status
-docker-compose ps
-docker-compose logs -f app
-```
-
-## ⚡ PM2 Deployment (VPS)
-
-```bash
-npm install -g pm2
-pm2 start ecosystem.config.js --env production
-pm2 save
-pm2 startup
-```
-
----
-
-## 📝 License
-
-ISC
-
----
-
-Built with ❤️ for JEE aspirants.
+Built to empower JEE aspirants with cutting-edge technology. 💡
