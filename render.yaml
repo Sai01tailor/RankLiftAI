@@ -1,0 +1,78 @@
+services:
+  # ══════════════════════════════════════════════
+  #  1) Node.js Backend API
+  # ══════════════════════════════════════════════
+  - type: web
+    name: jeewallah-api
+    # Using Docker environment to leverage the existing Dockerfile in the server directory
+    env: docker
+    rootDir: server
+    # Render overrides the port using the PORT env var by default
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      
+      # The internal URL / external URL of the ML service.
+      # You can replace this later if you deploy them separately or configure it in the Render dashboard.
+      - key: ML_SERVICE_URL
+        fromService:
+          type: web
+          name: jeewallah-ml
+          envVarKey: RENDER_INTERNAL_URL
+
+      # These variables won"t be committed to version control. 
+      # You need to fill their actual values in the Render Dashboard -> Environment.
+      - key: MONGODB_URI_PROD
+        sync: false
+      - key: REDIS_HOST
+        sync: false
+      - key: REDIS_PORT
+        sync: false
+      - key: REDIS_PASSWORD
+        sync: false
+      - key: JWT_ACCESS_SECRET
+        sync: false
+      - key: JWT_REFRESH_SECRET
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+
+  # ══════════════════════════════════════════════
+  #  2) Python ML Service
+  # ══════════════════════════════════════════════
+  - type: web
+    name: jeewallah-ml
+    # Using Docker environment to leverage the existing Dockerfile in the ml-service directory
+    env: docker
+    rootDir: ml-service
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_PORT
+        value: 5000
+      
+      # Define these values in the Render Dashboard -> Environment
+      - key: MONGODB_URI
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
