@@ -10,18 +10,8 @@ const router = Router();
 router.get("/plans", pc.getPlans);
 
 // Webhook — NO auth middleware, uses Razorpay signature verification
-// Need raw body for HMAC, so we parse it specially
-router.post(
-    "/webhook",
-    express.raw({ type: "application/json" }),
-    (req, res, next) => {
-        // Store raw body for HMAC verification, then parse JSON
-        req.rawBody = req.body.toString("utf8");
-        req.body = JSON.parse(req.rawBody);
-        next();
-    },
-    pc.handleWebhook
-);
+// Raw body is populated by global express.json verify middleware
+router.post("/webhook", pc.handleWebhook);
 
 
 // Protected routes — require authentication

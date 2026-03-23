@@ -25318,3 +25318,47 @@ VersionError: No matching document found for id "69aae79b1ec90455c7c92e76" versi
 2026-03-09 18:49:36 [DEBUG]: GET /api/v1/settings 304 289ms
 2026-03-09 18:54:53 [WARN]: [POST] /api/v1/auth/login — 401 Invalid email or password
 2026-03-09 18:54:53 [DEBUG]: POST /api/v1/auth/login 401 87ms
+2026-03-23 19:54:51 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-23 19:54:51 [INFO]: 📅 Initializing cron jobs...
+2026-03-23 19:54:51 [INFO]:    ✅ Hourly:  Expired token + subscription cleanup
+2026-03-23 19:54:51 [INFO]:    ✅ Daily:   Leaderboard rebuild (midnight IST)
+2026-03-23 19:54:51 [INFO]:    ✅ Weekly:  ML model retraining (Sunday 2 AM IST)
+2026-03-23 19:54:52 [INFO]: Redis connected successfully
+2026-03-23 19:54:52 [INFO]: Redis ready to accept commands
+2026-03-23 19:54:52 [INFO]: Redis PING successful
+2026-03-23 19:54:52 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-23 19:54:53 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-23 19:54:53 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-23 19:54:53 [INFO]: Worker 19208 listening on port 3001 [development]
+2026-03-23 19:54:53 [INFO]: Worker 6860 listening on port 3001 [development]
+2026-03-23 19:54:53 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-23 19:54:53 [INFO]: Redis config: emerging-cardinal-56896.upstash.io:6379 (TLS: true)
+2026-03-23 19:54:53 [INFO]: Worker 2112 listening on port 3001 [development]
+2026-03-23 19:54:53 [INFO]: Worker 1148 listening on port 3001 [development]
+2026-03-23 19:54:53 [INFO]: Redis connected successfully
+2026-03-23 19:54:53 [INFO]: Redis connected successfully
+2026-03-23 19:54:53 [INFO]: Redis connected successfully
+2026-03-23 19:54:53 [INFO]: Redis connected successfully
+2026-03-23 19:54:53 [INFO]: Redis ready to accept commands
+2026-03-23 19:54:53 [INFO]: Redis ready to accept commands
+2026-03-23 19:54:53 [INFO]: Redis PING successful
+2026-03-23 19:54:53 [INFO]: Redis ready to accept commands
+2026-03-23 19:54:53 [INFO]: Redis PING successful
+2026-03-23 19:54:53 [INFO]: Redis ready to accept commands
+2026-03-23 19:54:53 [INFO]: Redis PING successful
+2026-03-23 19:54:53 [INFO]: Redis PING successful
+2026-03-23 19:54:53 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-23 19:54:53 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-23 19:54:53 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-23 19:54:53 [INFO]: MongoDB connected: ac-5odzemh-shard-00-00.h8mx2c4.mongodb.net/test
+2026-03-23 19:54:59 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-23 19:54:59 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-23 19:54:59 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-23 19:54:59 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-23 19:54:59 [INFO]: SIGINT received. Closing MongoDB connection...
+2026-03-23 19:54:59 [WARN]: MongoDB disconnected
+2026-03-23 19:54:59 [WARN]: MongoDB disconnected
+2026-03-23 19:54:59 [WARN]: MongoDB disconnected
+2026-03-23 19:54:59 [WARN]: MongoDB disconnected
+2026-03-23 19:54:59 [INFO]: Stopping all cron jobs...
+2026-03-23 19:54:59 [INFO]: All cron jobs stopped.
