@@ -1,6 +1,10 @@
 const cluster = require("cluster");
 const os = require("os");
+const dns = require("dns");
 const { initCronJobs, stopCronJobs } = require("./services/cronJobs");
+
+// Force IPv4 resolution globally by default to fix ENETUNREACH issues on Render
+dns.setDefaultResultOrder("ipv4first");
 
 if (cluster.isPrimary) {
     const numCPUs = Math.min(os.cpus().length, 4); // Cap at 4 workers
