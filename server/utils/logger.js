@@ -8,7 +8,8 @@ const path = require("path");
 //  - JSON format for log aggregation tools
 // ══════════════════════════════════════════════
 
-const logDir = process.env.LOG_DIR || path.join(__dirname, "..", "logs");
+const os = require("os");
+const logDir = process.env.LOG_DIR || path.join(os.tmpdir(), "jeewallah_logs");
 
 const logFormat = winston.format.combine(
     winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
