@@ -21,41 +21,52 @@ const logFormat = winston.format.combine(
     })
 );
 
-const logger = winston.createLogger({
-    level: process.env.LOG_LEVEL || "debug",
-    format: logFormat,
-    transports: [
-        // Console output (always)
-        new winston.transports.Console({
-            format: winston.format.combine(
-                winston.format.colorize(),
-                logFormat
-            )
-        }),
-        // Error log file
+// We always want console transport
+const transports = [
+    new winston.transports.Console({
+        format: winston.format.combine(
+            winston.format.colorize(),
+            logFormat
+        )
+    })
+];
+
+const exceptionHandlers = [];
+const rejectionHandlers = [];
+
+// Only write to files locally to avoid EACCES errors on cloud deployments
+if (process.env.NODE_ENV !== "production") {
+    transports.push(
         new winston.transports.File({
             filename: path.join(logDir, "error.log"),
             level: "error",
             maxsize: 5242880, // 5MB
             maxFiles: 5
         }),
-        // Combined log file
         new winston.transports.File({
             filename: path.join(logDir, "combined.log"),
             maxsize: 5242880,
             maxFiles: 5
         })
-    ],
-    exceptionHandlers: [
+    );
+    exceptionHandlers.push(
         new winston.transports.File({
             filename: path.join(logDir, "exceptions.log")
         })
-    ],
-    rejectionHandlers: [
+    );
+    rejectionHandlers.push(
         new winston.transports.File({
             filename: path.join(logDir, "rejections.log")
         })
-    ]
+    );
+}
+
+const logger = winston.createLogger({
+    level: process.env.LOG_LEVEL || "debug",
+    format: logFormat,
+    transports,
+    exceptionHandlers: exceptionHandlers.length > 0 ? exceptionHandlers : undefined,
+    rejectionHandlers: rejectionHandlers.length > 0 ? rejectionHandlers : undefined
 });
 
 module.exports = logger;
