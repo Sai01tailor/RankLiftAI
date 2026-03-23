@@ -9,7 +9,8 @@ const path = require("path");
 // ══════════════════════════════════════════════
 
 const os = require("os");
-const logDir = process.env.LOG_DIR || path.join(os.tmpdir(), "jeewallah_logs");
+// Force use of OS temp directory because process.env.LOG_DIR was injecting './logs'
+const logDir = path.join(os.tmpdir(), "jeewallah_logs");
 
 const logFormat = winston.format.combine(
     winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
